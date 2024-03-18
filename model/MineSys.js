@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
 const MineSchema = new Schema({
@@ -22,4 +22,5 @@ const MineSchema = new Schema({
 })
 
 const MineSys = model("MineSys", MineSchema);
-export default MineSys;
+// export default MineSys;
+module.exports = MineSys

@@ -1,8 +1,13 @@
-import express from "express";
-import mongoose from "mongoose";
-import bodyparser from "body-parser";
-import dotenv from "dotenv";
-import MineSys from "./model/MineSys.js";
+// import express from "express";
+// import mongoose from "mongoose";
+// import bodyparser from "body-parser";
+// import dotenv from "dotenv";
+// import MineSys from "./model/MineSys.js";
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyparser = require("body-parser");
+const dotenv = require("dotenv");
+const MineSys = require("./model/MineSys.js");
 
 
 const app = express();
