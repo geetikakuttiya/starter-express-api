@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 const bodyparser = require("body-parser");
 const dotenv = require("dotenv");
 const MineSys = require("./model/MineSys.js");
+const rateLimit = require('express-rate-limit')
 
 
 const app = express();
