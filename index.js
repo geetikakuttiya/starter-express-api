@@ -23,6 +23,7 @@ dotenv.config();
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(limiter);
+const APIPORT = process.env.PORT || 3000
 
 app.get("/", (req, res) => {
     res.send('The API is dead and no longer in use.');
@@ -55,7 +56,7 @@ mongoose.set('strictQuery', false)
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
     console.log('Mongo connected')
-    app.listen(process.env.PORT || 3000, () => {
+    app.listen(APIPORT, () => {
         console.log("Server is running on port 3000");
     });
 })
